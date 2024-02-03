@@ -40,3 +40,51 @@ import {jsx as _jsx} from 'react/jsx-runtime';
 ## Rendering
 
 ## Prevent rerenders
+- snažit se přibližovat "state" co nejblíž ke komponentům, ktery ho potřebují (pokud mám state v parent componentu, kde ho využívá např jen 1 component z 5, tak změna toho stavu přerenderuje všech 5 komponentů a vlastně bude fungovat úplně stejně jako Context API - vyřeším presunutím state do toho 1 comp co ho potřeboval)
+- namísto toho, aby 1 component obsahoval 10 dalších component je lepší to rozdělit tak, aby bylo víc component vedle sebe a ne vnořených v jednom komponentu
+```
+//takhle ne
+function CoolFunc(){
+  return(
+    <div>
+      <LameText/>
+      ....
+      <CoolFeature/>
+      ....
+    </div>
+  )
+}
+
+//lepší řešení
+function NicePage(){
+  return(
+    <div>
+      <LameText/>
+      <CoolFunc/>
+      <CoolFeature/>
+    </div>
+  )
+}
+```
+- pokud potřebuji zobrazit nějaký expensive component uvnitř dalšího komponentu, který se může rerenderovat, tak je dobry ho nevložit přímo do něj, ale poslat jako children, díky tomu nebude řešit rerendery toho "Design component" ale "HomePage"
+```
+//takhle ne
+function Design(){
+  return(
+    <div>
+      <Comp1/>
+      <ExpensiveComp/>
+      ....
+    </div>
+  )
+}
+
+//lepší řešení
+function HomePage(){
+  return(
+    <Design>
+      <ExpensiveComp/>
+    </Design>
+  )
+}
+```
