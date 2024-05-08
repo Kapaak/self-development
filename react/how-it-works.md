@@ -2,7 +2,7 @@
 Bližší info k tomu, jak React funguje - proč dělá, co dělá 😀
 
 ## JSX
-- syntaxe pro psaní HTML uvnitř JS filů
+- syntaxe pro psaní HTML uvnitř JS souborů
 - JSX se transformuje do JS kódu ještě předtím, než se zobrazí v browseru
 - tuto transformaci dělá tzv. transpiler - Babel, který transformuje JSX kód do série function callů
 
