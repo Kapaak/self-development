@@ -39,6 +39,9 @@ import {jsx as _jsx} from 'react/jsx-runtime';
 
 ## Rendering
 
+<img width="1110" height="951" alt="SCR-20250909-otas" src="https://github.com/user-attachments/assets/c6775723-15eb-4105-8c5c-94ef7e05e598" />
+
+
 ## Prevent rerenders
 - snažit se přibližovat "state" co nejblíž ke komponentům, ktery ho potřebují, pokud mám state v parent componentu, kde ho využívá např jen 1 component z 5, tak změna toho stavu přerenderuje všech 5 komponentů ikdyž ho nevyužívají
   - vlastně pak bude fungovat úplně stejně jako Context API
