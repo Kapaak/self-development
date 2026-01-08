@@ -100,5 +100,12 @@ function HomePage(){
   - ![image](https://github.com/Kapaak/self-development/assets/58420887/e2d57fe5-ac64-43f4-854b-b92b15173a79)
   - pokud chceme posílat další hodnotu, je potřeba vytvořit další Context a obalit to :(
 
+- Memoizace v tomto komponentu je rozbitá a to z toho důvodu, že ikdyž nemá ChildMemo žádné viditelné props, tak v reálu jeden má a to children. Dá se to totiž zapsat jako ```<ChildMemo children={....}>...```
+<img width="462" height="466" alt="image" src="https://github.com/user-attachments/assets/cd1b70f9-cf78-4879-8f85-352def730c52" />
+- Řešení <img width="469" height="492" alt="image" src="https://github.com/user-attachments/assets/014a90f3-f8ad-493d-a331-8158c83672a1" />
+
+
+
+
 
 
