@@ -6,3 +6,7 @@
 <img width="1066" height="93" alt="SCR-20250909-ovtk" src="https://github.com/user-attachments/assets/b89edd7e-1d5b-43e3-956d-344009caa4eb" />
 
 <i>By React Design Patterns and Best Practices, Michele Bertoli</i>
+
+
+- Důvodem pro použití takového rozdělení je **separation of concerns** , kdy chceme oddělit logiku a vzhled
+- Dá se řešit i tak, že se nevytváří prezentační komponenta, ale logika se vytáhne do **custom hooku**
